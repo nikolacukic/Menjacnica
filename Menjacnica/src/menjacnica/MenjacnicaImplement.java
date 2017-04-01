@@ -13,7 +13,6 @@ public class MenjacnicaImplement implements MenjacnicaInterfejs {
 	private LinkedList<Valuta> valute = new LinkedList<Valuta>();
 
 	@Override
-
 	public void dodajKursNaDan(Valuta valuta, Kurs kurs, GregorianCalendar dan) {
 		for (int i = 0; i < valute.size(); i++) {
 			if(valute.get(i).equals(valuta)){
@@ -33,7 +32,6 @@ public class MenjacnicaImplement implements MenjacnicaInterfejs {
 
 	@Override
 	public void izbrisiKursNaDan(Valuta valuta, GregorianCalendar dan) {
-	
 		for (int i = 0; i < valute.size(); i++) {
 			if( valute.get(i).equals(valuta)){
 				LinkedList<Kurs> kursevi = valute.get(i).getKursNaDan();
@@ -59,7 +57,7 @@ public class MenjacnicaImplement implements MenjacnicaInterfejs {
 			 	}
 			 }
 		}
-		throw new RuntimeException("Ne postoji kurs za taj datum");
+		throw new RuntimeException("Nije pronadjen kurs za ovaj datum");
 	}
 
 }
